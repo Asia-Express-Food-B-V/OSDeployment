@@ -59,7 +59,7 @@ $listBox.Width  = 300
 [void] $listBox.Items.Add('-------- Asia Express Food --------')
 [void] $listBox.Items.Add('Personal')
 [void] $listBox.Items.Add('Shared-AEF')
-[void] $listBox.Items.Add('-------------------------')
+[void] $listBox.Items.Add(' ')
 [void] $listBox.Items.Add('-------- Schiava --------')
 [void] $listBox.Items.Add('Personal-SCH')
 [void] $listBox.Items.Add('Shared-SCH')
