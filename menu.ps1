@@ -63,6 +63,10 @@ $listBox.Width  = 300
 [void] $listBox.Items.Add('-------- Schiava --------')
 [void] $listBox.Items.Add('Personal-SCH')
 [void] $listBox.Items.Add('Shared-SCH')
+[void] $listBox.Items.Add(' ')
+[void] $listBox.Items.Add('-------- Brouwer Horeca --------')
+[void] $listBox.Items.Add('Personal-BRH')
+[void] $listBox.Items.Add('Shared-BRH')
 $form.Controls.Add($listBox)
 
 $form.Topmost = $true
