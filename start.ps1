@@ -82,6 +82,7 @@ if (Test-path -path "x:\windows\system32\cmtrace.exe"){
 }
 
 $GroupTag | Out-File -FilePath C:\Windows\DeviceType.txt
+$assigned | Out-File -FilePath C:\Windows\AssignedUser.txt
 #$array | Out-File -FilePath C:\Windows\array.txt
 
 
