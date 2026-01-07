@@ -6,10 +6,13 @@ Creates Setup Complete Files
 Set-ExecutionPolicy Bypass -Force
 
 iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/menu.ps1)
-iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
 iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/functions.ps1)
 
 Write-Host -Foreground Red $GroupTag
+if ($GroupTag -eq "Personal"){
+    iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
+    }
+
 
 sleep -Seconds 3
 
