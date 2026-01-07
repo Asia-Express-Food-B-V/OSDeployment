@@ -27,7 +27,7 @@ $form.Controls.Add($cancelButton)
 
 $label = New-Object System.Windows.Forms.Label
 $label.Location = New-Object System.Drawing.Point(10,20)
-$label.Size = New-Object System.Drawing.Size(280,30)
+$label.Size = New-Object System.Drawing.Size(280,40)
 $label.Text = 'E-mail adres van de gebruiker van deze laptop:'
 $form.Controls.Add($label)
 
