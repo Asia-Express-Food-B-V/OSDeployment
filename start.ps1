@@ -9,6 +9,11 @@ iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/ma
 iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/functions.ps1)
 
 Write-Host -Foreground Red $GroupTag
+if ($GroupTag -eq "Windows"){
+    Start-OSDCloudGui
+    Exit 0
+    }
+
 if ($GroupTag -eq "Personal"){
     iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
     }
