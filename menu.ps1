@@ -149,6 +149,7 @@ $listBox.Width  = 300
 [void] $listBox.Items.Add('Personal')
 [void] $listBox.Items.Add('Shared-AEF')
 [void] $listBox.Items.Add('Kiosk')
+[void] $listBox.Items.Add('Test')
 [void] $listBox.Items.Add(' ')
 [void] $listBox.Items.Add('-------- Schiava --------')
 [void] $listBox.Items.Add('Personal-SCH')
