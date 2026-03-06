@@ -11,10 +11,12 @@ iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/ma
 Write-Host -Foreground Red $GroupTag
 
 
-if (($GroupTag -eq "Personal") -or ($GroupTag -eq "Paswordless")){
+if ($GroupTag -eq "Personal"){
     iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
     }
-
+if ($GroupTag -eq "Passwordless"){
+    iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
+    }
 
 sleep -Seconds 3
 
