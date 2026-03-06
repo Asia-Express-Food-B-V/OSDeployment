@@ -9,13 +9,9 @@ iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/ma
 iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/functions.ps1)
 
 Write-Host -Foreground Red $GroupTag
-if ($GroupTag -eq "Windows"){
-    Start-OSDCloudGui
-    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.* 
-    Exit 0
-    }
 
-if ($GroupTag -eq "Personal"){
+
+if (($GroupTag -eq "Personal") -or ($GroupTag -eq "Paswordless")){
     iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
     }
 
@@ -110,6 +106,11 @@ if (!(Test-Path $DriverPath$ImageFileNameDL)){Copy-Item -Path C:\OSDCloud\OS\$Im
 }
 #===================
 
+if ($GroupTag -eq "Windows"){
+    Start-OSDCloudGui
+    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.* 
+    Exit 0
+    }
 
 restart-computer
 }
