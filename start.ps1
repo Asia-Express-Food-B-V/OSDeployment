@@ -110,8 +110,9 @@ if (!(Test-Path $DriverPath$ImageFileNameDL)){Copy-Item -Path C:\OSDCloud\OS\$Im
 
 if ($GroupTag -eq "Windows"){
     Start-OSDCloudGui
-    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.* 
-    Exit 0
+    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.*
+    Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* 
+    # Exit 0
     }
 
 restart-computer
