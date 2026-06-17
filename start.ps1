@@ -19,6 +19,13 @@ if ($GroupTag -eq "Passwordless"){
     }
 
 sleep -Seconds 3
+if ($GroupTag -eq "Windows"){
+    Start-OSDCloudGui
+    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.*
+    Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* 
+    restart-computer
+    # Exit 0
+    }
 
 #WinPE Stuff
 if ($env:SystemDrive -eq 'X:') {
@@ -108,12 +115,14 @@ if (!(Test-Path $DriverPath$ImageFileNameDL)){Copy-Item -Path C:\OSDCloud\OS\$Im
 }
 #===================
 
+<#
 if ($GroupTag -eq "Windows"){
     Start-OSDCloudGui
     Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.*
     Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* 
     # Exit 0
     }
+#>
 
 restart-computer
 }
