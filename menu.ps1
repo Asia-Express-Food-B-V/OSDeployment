@@ -30,7 +30,7 @@ $form.Size = New-Object System.Drawing.Size(400,475)
 $form.StartPosition = 'CenterScreen'
 
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(150,370)
+$okButton.Location = New-Object System.Drawing.Point(150,380)
 $okButton.Size = New-Object System.Drawing.Size(75,23)
 $okButton.Text = 'OK'
 $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
@@ -38,7 +38,7 @@ $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(225,370)
+$cancelButton.Location = New-Object System.Drawing.Point(225,380)
 $cancelButton.Size = New-Object System.Drawing.Size(75,23)
 $cancelButton.Text = 'Cancel'
 $cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
@@ -54,7 +54,7 @@ $form.Controls.Add($label)
 $listBox = New-Object System.Windows.Forms.ListBox
 $listBox.Location = New-Object System.Drawing.Point(10,40)
 $listBox.Size = New-Object System.Drawing.Size(260,20)
-$listBox.Height = 320
+$listBox.Height = 330
 $listBox.Width  = 300
 [void] $listBox.Items.Add('-------- Asia Express Food --------')
 [void] $listBox.Items.Add('Personal')
