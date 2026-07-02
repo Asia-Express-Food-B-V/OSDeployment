@@ -23,8 +23,8 @@ if ($GroupTag -eq "Windows"){
     Start-OSDCloudGui
     Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.*
     Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* 
-    restart-computer
-    # Exit 0
+    # restart-computer
+    Exit 0
     }
 
 #WinPE Stuff
