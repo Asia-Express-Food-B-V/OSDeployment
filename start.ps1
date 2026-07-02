@@ -18,7 +18,8 @@ if ($GroupTag -eq "Passwordless"){
     iex (irm https://raw.githubusercontent.com/Asia-Express-Food-B-V/OSDeployment/main/AssignedUser.ps1)
     }
 
-sleep -Seconds 3
+Start-Sleep -Seconds 3
+
 if ($GroupTag -eq "Windows"){
     $OSDModuleResource.OSDCloud.Values.Language = "nl-nl"
     Start-OSDCloudGui -Brandname AsiaExpressFood 
