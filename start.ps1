@@ -20,9 +20,11 @@ if ($GroupTag -eq "Passwordless"){
 
 sleep -Seconds 3
 if ($GroupTag -eq "Windows"){
-    Start-OSDCloudGui
-    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.*
-    Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* 
+    $OSDModuleResource.OSDCloud.Values.Language = "nl-nl"
+    Start-OSDCloudGui -Brandname AsiaExpressFood 
+    Start-Sleep -Seconds 3
+    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.* -Force
+    Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* -Force
     # restart-computer
     Exit 0
     }
