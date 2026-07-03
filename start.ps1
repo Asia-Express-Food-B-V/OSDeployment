@@ -22,9 +22,10 @@ Start-Sleep -Seconds 3
 
 if ($GroupTag -eq "Windows"){
     $OSDModuleResource.OSDCloud.Values.Language = "nl-nl"
-    Start-OSDCloudGui -Brandname AsiaExpressFood 
+    $OSDModuleResource.StartOSDCloudGUI.updateFirmware = $true
+    Start-OSDCloudGui -Brandname AsiaExpressFood -BrandColor '#ee7e05'
     Start-Sleep -Seconds 3
-    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.* -Force
+    Remove-Item -Path c:\OSDCloud\Scripts\SetupComplete\SetupComplete.* -Force
     Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* -Force
     # restart-computer
     Exit 0
@@ -117,15 +118,6 @@ if (!(Test-Path $DriverPath)){New-Item -ItemType Directory -Path $DriverPath}
 if (!(Test-Path $DriverPath$ImageFileNameDL)){Copy-Item -Path C:\OSDCloud\OS\$ImageFileNameDL -Destination $DriverPath$ImageFileNameDL -Force}
 }
 #===================
-
-<#
-if ($GroupTag -eq "Windows"){
-    Start-OSDCloudGui
-    Remove-Item -Path c:\OSDCloud\Config\Scripts\SetupComplete\SetupComplete.*
-    Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* 
-    # Exit 0
-    }
-#>
 
 restart-computer
 }
