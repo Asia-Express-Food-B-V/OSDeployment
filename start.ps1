@@ -29,7 +29,7 @@ if ($GroupTag -eq "Windows"){
     Start-Sleep -Seconds 3
     Remove-Item -Path c:\OSDCloud\Scripts\SetupComplete\SetupComplete.* -Force
     Remove-Item -Path c:\Windows\Setup\Scripts\SetupComplete.* -Force
-    # restart-computer
+    restart-computer
     Exit 0
     }
 
