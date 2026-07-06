@@ -24,6 +24,7 @@ if ($GroupTag -eq "Windows"){
     $OSDModuleResource.OSDCloud.Values.Language = "nl-nl"
     $OSDModuleResource.StartOSDCloudGUI.updateFirmware = $true
     $OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm  = $false
+    $OSDModuleResource.StartOSDCloudGUI.restartComputer  = $false
     Start-OSDCloudGui -Brandname AsiaExpressFood -BrandColor '#ee7e05'
     Start-Sleep -Seconds 3
     Remove-Item -Path c:\OSDCloud\Scripts\SetupComplete\SetupComplete.* -Force
